@@ -10,34 +10,23 @@
 // if sum is above 21 => lose
 
 
-// 1. Create two variables, firstCard and secondCard. 
-// Set their values to a random number between 2-11
-let firstCard = 15;
-let secondCard = 8;
-// 2. Create a variable, sum, and set it to the sum of the two cards
+let firstCard = 10;
+let secondCard = 11;
 let sum = firstCard + secondCard;
-// 3. Cashout
 let hasBlackJack = false;
-// 4. Create a variable called isAlive and assign it to true
 let isAlive = true;
-// 5. Flip its value to false in the appropriate code block 
-
-// Write the conditional according to these rules:
-
-// if less than or equal to 20 -> "Do you want to draw a new card? 🙂"
-// else if exactly 21 -> "Wohoo! You've got Blackjack! 🥳"
-// else -> "You're out of the game! 😭"
-
+// 1. Declare a variable called message and assign its value to an empty string
+let message = "";
+// 2. Reassign the message variable to the string we're logging out
 if (sum <= 20) {
-    console.log("Do you want to draw a new card? 🙂");
+    message = "Do you want to draw a new card? 🙂";
 } else if (sum === 21) {
-    console.log("Wohoo! You've got Blackjack! 🥳");
-    hasBlackJack = false;
+    message = "You've got Blackjack! 🥳";
+    hasBlackJack = true;
 } else {
-    console.log("You're out of the game! 😭");
+    message = "You're out of the game! 😭";
     isAlive = false;
 }
 
-
-console.log(isAlive);
-
+// 3. Log it out!
+console.log(message);
