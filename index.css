@@ -1,3 +1,38 @@
+body {
+    background-color: black;
+    background-image: radial-gradient(rgba(78, 225, 29, 0.75), black 120%);
+    height: 100vh;
+    height: 930px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
 h1 {
-    color: rgb(255, 119, 0);
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+/* 
+3. Style the button according to the provided design
+text color - #016f32
+width      - 150px
+background - goldenrod
+ */
+
+button {
+    color: #016f32;
+    width: 150px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
 }
