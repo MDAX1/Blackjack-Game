@@ -18,12 +18,19 @@ function startGame() {
         message = "Blackjack!";
         hasBlackJack = true;
     } else {
-        message = "You're out of the game!";
+        message = "You lost, You're out of the game!";
         isAlive = false;
     }
     messageEl.textContent = message;
 }
 
 function newCard() {
-    console.log("Drawing a new card from the deck!")
+    console.log("Drawing a new card from the deck!");
+    // 1. Create a card variable, and hard code its value to a number (2-11)
+     let card = 2;
+    // 2. Add the new card to the sum variable
+      sum += card;
+    // 3. Call startGame()
+    startGame();
 }
+
