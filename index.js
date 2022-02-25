@@ -1,5 +1,6 @@
-let firstCard = 10;
-let secondCard = 5;
+// 2. Use getRandomCard() to set the values of firstCard and secondCard
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard]; // array - ordered list of items
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -10,13 +11,17 @@ let messageEl = document.getElementById("message-el");
 // let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
+// 1. Create a function, getRandomCard(), that always returns the number 5
+function getRandomCard(){
+    return 5;
+}
+
 function startGame() {
     renderGame();
 }
 
 function renderGame() {
-    cardsEl.textContent = "Cards: "
-    // Create a for loop that renders out all the cards instead of just two
+    cardsEl.textContent = "Cards: ";
     for (let i = 0; i < cards.length; i++){ 
         cardsEl.textContent += cards[i] + " ";
     }
@@ -34,10 +39,10 @@ function renderGame() {
 }
 
 function newCard() {
+    // 3. Use the getRandomCard() to set the value of card
     console.log("Drawing a new card from the deck!");
-    let card = 2;
+    let card = getRandomCard();
     sum += card;
-    // Push the card to the cards array
     cards.push(card);
     console.log(cards);
     renderGame();
