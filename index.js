@@ -10,10 +10,18 @@ let messageEl = document.getElementById("message-el");
 // let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
-// Make this function return a random number between 1 and 13
-function getRandomCard(){
-    let randNum = Math.floor(Math.random()*13)+1;
-    return randNum;
+
+function getRandomCard() {
+    // if 1     -> return 11
+    // if 11-13 -> return 10
+    let randomNumer = Math.floor( Math.random()*13 ) + 1
+    if (randomNumer > 10) {
+        return 10
+    } else if (randomNumer === 1) {
+        return 11
+    } else {
+        return randomNumer
+    }
 }
 
 function startGame() {
