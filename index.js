@@ -8,7 +8,20 @@ let messageEl = document.getElementById("message-el");
 // let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
-console.log(cards);
+// create object
+let player = {
+    name: "Mehrdad",
+    chips: 150
+}
+
+
+// let playerName = "Mehrdad";
+// let playerChips = 150;
+
+// grab the element
+PlayerEl = document.getElementById("player-el");
+// render the playerEl
+PlayerEl.textContent = player.name + ": $" + player.chips;
 
 function getRandomCard() {
     let randomNumer = Math.floor( Math.random()*13 ) + 1
