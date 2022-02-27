@@ -14,14 +14,10 @@ let player = {
     chips: 150
 }
 
-
-// let playerName = "Mehrdad";
-// let playerChips = 150;
-
 // grab the element
-PlayerEl = document.getElementById("player-el");
+let playerEl = document.getElementById("player-el");
 // render the playerEl
-PlayerEl.textContent = player.name + ": $" + player.chips;
+playerEl.textContent = player.name + ": $" + player.chips;
 
 function getRandomCard() {
     let randomNumer = Math.floor( Math.random()*13 ) + 1
