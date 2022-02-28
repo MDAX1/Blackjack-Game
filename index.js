@@ -1,3 +1,8 @@
+// 2. Create the player object. Give it two keys, name and chips, and set their values
+let player = {
+    name: "Mehrdad",
+    chips: "100"
+}
 let cards = []; // array - ordered list of items
 let sum = 0; // by default
 let hasBlackJack = false;
@@ -8,19 +13,14 @@ let messageEl = document.getElementById("message-el");
 // let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
-// create object
-let player = {
-    name: "Mehrdad",
-    chips: 150
-}
-
-// grab the element
+// 3. Grab ahold of the player-el paragraph and store it in a variable called playerEl
 let playerEl = document.getElementById("player-el");
-// render the playerEl
+console.log(playerEl);
+// 4. Render the player's name and chips in playerEl
 playerEl.textContent = player.name + ": $" + player.chips;
 
 function getRandomCard() {
-    let randomNumer = Math.floor( Math.random()*13 ) + 1
+    let randomNumer = Math.floor(Math.random() * 13) + 1
     if (randomNumer > 10) {
         return 10;
     } else if (randomNumer === 1) {
@@ -41,7 +41,7 @@ function startGame() {
 
 function renderGame() {
     cardsEl.textContent = "Cards: ";
-    for (let i = 0; i < cards.length; i++){ 
+    for (let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " ";
     }
     sumEl.textContent = "Sum: " + sum;
